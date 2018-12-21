@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{B8C64488-4122-46F1-A6AB-DA806C71DB95}</ProjectGuid>
+    <TargetFrameworkProfile />
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Goibibo_Test</RootNamespace>
+    <AssemblyName>Goibibo_Test</AssemblyName>
+    <RanorexVersion>8.3</RanorexVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RanorexTargetsPath>$(MSBuildProgramFiles32)\MSBuild\Ranorex$(RanorexVersion)\Ranorex.MSBuild.Targets</RanorexTargetsPath>
+    <projectdefaultrepository>10EAF94A-5135-4DC7-8D2C-417D3F4DC1CD</projectdefaultrepository>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ranorex.Bootstrapper">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core.Resolver">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Cef">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.ChromeWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Delphi">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.FirefoxWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Flex">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Java">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Mobile">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Msaa">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Office">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Qt">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.RawText">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Sap">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Uia">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WebDriver">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Win32">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WinForms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Wpf">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <id>77826df5-9b3c-42da-a2f8-d2215f7aa1a7</id>
+    </Compile>
+    <Compile Include="Bus.cs">
+      <BoundTo>E2C7B3B6-B3A2-48E2-9835-2C1DA4854D66</BoundTo>
+      <DependentUpon>Bus.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>a4bd782e-06f2-407d-bb46-6263d90ec098</id>
+    </Compile>
+    <Compile Include="Car.cs">
+      <BoundTo>7b3ea8c3-1d62-463f-83c6-a058c28ce41c</BoundTo>
+      <DependentUpon>Car.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>6b796a32-0744-4f06-9634-72f8b73dffd3</id>
+      <RepositoryCode>true</RepositoryCode>
+    </Compile>
+    <Compile Include="Car.UserCode.cs">
+      <BoundTo>7b3ea8c3-1d62-463f-83c6-a058c28ce41c</BoundTo>
+      <DependentUpon>Car.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>9585c974-747e-4cfd-a58e-1d1bda25acf7</id>
+    </Compile>
+    <Compile Include="Cars.cs">
+      <BoundTo>cd76b9d4-8a28-40f0-87b4-be70f22df9e7</BoundTo>
+      <DependentUpon>Cars.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>8c16b84d-9dca-46ab-bac3-7d21c50a57cc</id>
+    </Compile>
+    <Compile Include="Cars.UserCode.cs">
+      <BoundTo>cd76b9d4-8a28-40f0-87b4-be70f22df9e7</BoundTo>
+      <DependentUpon>Cars.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>168372bc-a02b-4750-8a8c-c7f36d34704e</id>
+    </Compile>
+    <Compile Include="Dom_Flight.cs">
+      <BoundTo>d1018a91-e23c-46a0-8d27-9fa4bb5e7904</BoundTo>
+      <DependentUpon>Dom_Flight.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>87175979-e375-4b3f-8271-ddaac4f46932</id>
+    </Compile>
+    <Compile Include="Dom_Flight.UserCode.cs">
+      <BoundTo>d1018a91-e23c-46a0-8d27-9fa4bb5e7904</BoundTo>
+      <DependentUpon>Dom_Flight.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>ba83385c-baaf-40a5-8f80-5122f4e478ed</id>
+    </Compile>
+    <Compile Include="Dom_hotel.cs">
+      <BoundTo>5f3624e0-bba7-4901-9722-b592cddd3e48</BoundTo>
+      <DependentUpon>Dom_hotel.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>b1262b4e-4b97-4399-921c-6374b0cb304f</id>
+    </Compile>
+    <Compile Include="Dom_hotel.UserCode.cs">
+      <BoundTo>5f3624e0-bba7-4901-9722-b592cddd3e48</BoundTo>
+      <DependentUpon>Dom_hotel.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>f813afc1-1fcd-4650-a2e3-028a43d42ebe</id>
+    </Compile>
+    <Compile Include="FlightRepo.cs">
+      <BoundTo>B5842775-2C74-4D86-B7B5-D5E60B2CF2DB</BoundTo>
+      <DependentUpon>FlightRepo.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>414b4ef9-b464-4bcf-9d95-3cedd9839dc0</id>
+    </Compile>
+    <Compile Include="GIBUS.cs">
+      <BoundTo>bf04810a-eb2e-4afd-96a3-c7b7d90956ff</BoundTo>
+      <DependentUpon>GIBUS.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>40fe05fc-adaf-4f23-825d-820913fe3d69</id>
+    </Compile>
+    <Compile Include="GIBUS.UserCode.cs">
+      <BoundTo>bf04810a-eb2e-4afd-96a3-c7b7d90956ff</BoundTo>
+      <DependentUpon>GIBUS.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>11e6dd7b-08d8-487e-af8d-b7ccc34ebda4</id>
+    </Compile>
+    <Compile Include="Goibibo_TestRepository.cs">
+      <BoundTo>e7a3a272-62c8-4ab7-bfe5-7e037f8c5b84</BoundTo>
+      <DependentUpon>Goibibo_TestRepository.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>2581af84-ba9b-4171-ad4c-7a9c6ddbf6dc</id>
+    </Compile>
+    <Compile Include="IF.cs">
+      <BoundTo>10EAF94A-5135-4DC7-8D2C-417D3F4DC1CD</BoundTo>
+      <DependentUpon>IF.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>63d25a84-9c23-461c-b832-553fbb15e0c8</id>
+    </Compile>
+    <Compile Include="IH.cs">
+      <BoundTo>c18dc701-ca64-4fe7-8624-810d35051d4a</BoundTo>
+      <DependentUpon>IH.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>853e7d5e-0225-44a1-b99b-fabea82b5ed0</id>
+    </Compile>
+    <Compile Include="IH.UserCode.cs">
+      <BoundTo>c18dc701-ca64-4fe7-8624-810d35051d4a</BoundTo>
+      <DependentUpon>IH.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>43edf72f-e7d6-49a4-81de-8e4fd5d367a0</id>
+    </Compile>
+    <Compile Include="International_flight.cs">
+      <BoundTo>1568fe00-aa7d-43b7-868f-cbf27741bc65</BoundTo>
+      <DependentUpon>International_flight.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>0b58e44c-9cab-4926-b012-113feae4c514</id>
+    </Compile>
+    <Compile Include="International_flight.UserCode.cs">
+      <BoundTo>1568fe00-aa7d-43b7-868f-cbf27741bc65</BoundTo>
+      <DependentUpon>International_flight.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>ea702a4c-0b17-4b31-a02d-f7bde4b3eb50</id>
+    </Compile>
+    <Compile Include="Program.cs">
+      <id>006eef16-d32e-4dea-9062-eda1b84f0b7f</id>
+    </Compile>
+    <Compile Include="Sign_IN.cs">
+      <BoundTo>be307dcd-dab8-4d94-ac85-f7ed8ffc30fa</BoundTo>
+      <DependentUpon>Sign_IN.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>a5f69ca4-5d0c-466d-895a-233817424b07</id>
+    </Compile>
+    <Compile Include="Sign_IN.UserCode.cs">
+      <BoundTo>be307dcd-dab8-4d94-ac85-f7ed8ffc30fa</BoundTo>
+      <DependentUpon>Sign_IN.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>ebf44f8c-ff7e-4826-aaa0-dd49352a5cfa</id>
+    </Compile>
+    <Compile Include="Train.cs">
+      <BoundTo>7E1BE1B5-97FC-4A0F-99AF-1BA166114C84</BoundTo>
+      <DependentUpon>Train.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>b6718083-f2ba-474d-bb55-4c43a1c00840</id>
+    </Compile>
+    <Compile Include="Train1.cs">
+      <BoundTo>a12d8e02-dd01-4561-8c1f-1a40557cbcb7</BoundTo>
+      <DependentUpon>Train1.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>80447f10-b977-43a7-aa18-91e64e329d13</id>
+    </Compile>
+    <Compile Include="Train1.UserCode.cs">
+      <BoundTo>a12d8e02-dd01-4561-8c1f-1a40557cbcb7</BoundTo>
+      <DependentUpon>Train1.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>a691b9f3-49c6-42b2-8b3a-e456af405c45</id>
+    </Compile>
+    <Compile Include="URls.cs">
+      <BoundTo>06947e1f-8984-4d68-a161-d544a47f8b06</BoundTo>
+      <DependentUpon>URls.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>dcabe819-ffbf-49c5-bf63-acb121914c47</id>
+    </Compile>
+    <Compile Include="URls.UserCode.cs">
+      <BoundTo>06947e1f-8984-4d68-a161-d544a47f8b06</BoundTo>
+      <DependentUpon>URls.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>38d7338b-667b-4953-aa8a-626cb7834a66</id>
+    </Compile>
+    <Compile Include="UserCodeModule1.cs">
+      <id>c4c9ef89-745e-4baf-8d13-7e7150068bec</id>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <id>51f293ae-bdda-458b-b2c7-710d36a84134</id>
+    </None>
+    <None Include="Bus.rximg">
+      <BoundTo>E2C7B3B6-B3A2-48E2-9835-2C1DA4854D66</BoundTo>
+      <DependentUpon>Bus.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>d387998c-473f-4a94-a086-d7f4461433bc</id>
+    </None>
+    <None Include="Bus.rxrep">
+      <id>E2C7B3B6-B3A2-48E2-9835-2C1DA4854D66</id>
+      <repoid>affb9b93-6139-4144-a947-9ca40b589e79</repoid>
+      <reporootid>5665a9ed-be37-4238-aa99-053318db9133</reporootid>
+    </None>
+    <None Include="Car.rximg">
+      <BoundTo>52BB3B10-27F7-4037-B63A-EAD1E0A5BC8F</BoundTo>
+      <DependentUpon>Car.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>8bd8780a-8c87-467d-ae74-f5e9a6e07a69</id>
+    </None>
+    <None Include="Car.rxrec">
+      <id>7b3ea8c3-1d62-463f-83c6-a058c28ce41c</id>
+      <recordtableid>6c4d174f-d768-4ce1-aac8-a20a37f2ba54</recordtableid>
+      <BoundTo>e7a3a272-62c8-4ab7-bfe5-7e037f8c5b84</BoundTo>
+    </None>
+    <None Include="Car.rxrep">
+      <id>52BB3B10-27F7-4037-B63A-EAD1E0A5BC8F</id>
+      <repoid>e10f804b-712a-4d77-85ed-cc7b48ca5d16</repoid>
+      <reporootid>99244590-6897-4447-834c-7fcaaa73d148</reporootid>
+    </None>
+    <None Include="Cars.rxrec">
+      <BoundTo>10EAF94A-5135-4DC7-8D2C-417D3F4DC1CD</BoundTo>
+      <id>cd76b9d4-8a28-40f0-87b4-be70f22df9e7</id>
+      <recordtableid>1af2b338-5e15-49a0-88b7-b2665205538f</recordtableid>
+    </None>
+    <None Include="Dom_Flight.rxrec">
+      <id>d1018a91-e23c-46a0-8d27-9fa4bb5e7904</id>
+      <recordtableid>6d927d2b-48d5-4102-b89d-9aa6a9cd7e5a</recordtableid>
+      <BoundTo>B5842775-2C74-4D86-B7B5-D5E60B2CF2DB</BoundTo>
+    </None>
+    <None Include="Dom_hotel.rxrec">
+      <BoundTo>10EAF94A-5135-4DC7-8D2C-417D3F4DC1CD</BoundTo>
+      <id>5f3624e0-bba7-4901-9722-b592cddd3e48</id>
+      <recordtableid>fc3adcdb-f4ff-4147-a194-1faa4d6a31f9</recordtableid>
+    </None>
+    <None Include="FlightRepo.rximg">
+      <BoundTo>B5842775-2C74-4D86-B7B5-D5E60B2CF2DB</BoundTo>
+      <DependentUpon>FlightRepo.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>d2ec0243-6d0a-4537-9344-a387df6125f6</id>
+    </None>
+    <None Include="FlightRepo.rxrep">
+      <id>B5842775-2C74-4D86-B7B5-D5E60B2CF2DB</id>
+      <repoid>67600f1f-af60-42b8-bf89-1d269a967ee0</repoid>
+      <reporootid>b67f9c1c-058d-45ca-a796-07c1fbf4c5ca</reporootid>
+    </None>
+    <None Include="GIBUS.rxrec">
+      <BoundTo>10EAF94A-5135-4DC7-8D2C-417D3F4DC1CD</BoundTo>
+      <id>bf04810a-eb2e-4afd-96a3-c7b7d90956ff</id>
+      <recordtableid>982f458c-fdfd-4c31-9fe4-7fa7120b78ff</recordtableid>
+    </None>
+    <None Include="Goibibo_TestRepository.rximg">
+      <BoundTo>e7a3a272-62c8-4ab7-bfe5-7e037f8c5b84</BoundTo>
+      <DependentUpon>Goibibo_TestRepository.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>368bd7bd-d23f-4073-b43c-2d9a998f1feb</id>
+    </None>
+    <None Include="Goibibo_TestRepository.rxrep">
+      <id>e7a3a272-62c8-4ab7-bfe5-7e037f8c5b84</id>
+      <repoid>9cdb736b-da07-4400-bd9c-53ffdbb2d6ea</repoid>
+      <reporootid>3ae8b29b-4c99-421d-ae9d-0810cb5051f1</reporootid>
+    </None>
+    <None Include="IF.rximg">
+      <BoundTo>10EAF94A-5135-4DC7-8D2C-417D3F4DC1CD</BoundTo>
+      <DependentUpon>IF.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>484627f7-792f-4b91-8bb4-905864be30b8</id>
+    </None>
+    <None Include="IF.rxrep">
+      <id>10EAF94A-5135-4DC7-8D2C-417D3F4DC1CD</id>
+      <repoid>a00da935-3c1f-4872-b50d-5dfb0266116d</repoid>
+      <reporootid>6d21f950-a170-472a-8819-546b1c90cdfc</reporootid>
+    </None>
+    <None Include="IH.rxrec">
+      <BoundTo>10EAF94A-5135-4DC7-8D2C-417D3F4DC1CD</BoundTo>
+      <id>c18dc701-ca64-4fe7-8624-810d35051d4a</id>
+      <recordtableid>5b0b80af-2395-4ec6-a56f-1ad50673d233</recordtableid>
+    </None>
+    <None Include="International_flight.rxrec">
+      <id>1568fe00-aa7d-43b7-868f-cbf27741bc65</id>
+      <recordtableid>1059b405-4c16-42f4-8fdf-294449b58f89</recordtableid>
+      <BoundTo>e7a3a272-62c8-4ab7-bfe5-7e037f8c5b84</BoundTo>
+    </None>
+    <None Include="Sign_IN.rxrec">
+      <BoundTo>e7a3a272-62c8-4ab7-bfe5-7e037f8c5b84</BoundTo>
+      <id>be307dcd-dab8-4d94-ac85-f7ed8ffc30fa</id>
+      <recordtableid>3d3c07fc-93f6-49ce-aa8f-8a3d8842f484</recordtableid>
+    </None>
+    <None Include="Train.rximg">
+      <BoundTo>7E1BE1B5-97FC-4A0F-99AF-1BA166114C84</BoundTo>
+      <DependentUpon>Train.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>977bc6d3-1e64-432a-ae13-2c9076d16166</id>
+    </None>
+    <None Include="Train.rxrep">
+      <id>7E1BE1B5-97FC-4A0F-99AF-1BA166114C84</id>
+      <repoid>aa2cd048-b7d7-49b5-8991-5850b850d080</repoid>
+      <reporootid>3249f017-dded-4a3e-87ae-23e677f5d192</reporootid>
+    </None>
+    <None Include="Train1.rxrec">
+      <id>a12d8e02-dd01-4561-8c1f-1a40557cbcb7</id>
+      <recordtableid>c52c410b-565b-472a-bc1d-21caa1f8893d</recordtableid>
+      <BoundTo>7E1BE1B5-97FC-4A0F-99AF-1BA166114C84</BoundTo>
+    </None>
+    <None Include="URls.rxrec">
+      <BoundTo>10EAF94A-5135-4DC7-8D2C-417D3F4DC1CD</BoundTo>
+      <id>06947e1f-8984-4d68-a161-d544a47f8b06</id>
+      <recordtableid>d2fd989a-e110-48a3-8872-d1af3a0035fb</recordtableid>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Goibibo_Test.rxtmg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>c2cad9dc-fa5c-451f-8fbc-2ed9f012f02c</id>
+    </Content>
+    <Content Include="Goibibo_Test.rxtst">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>830ebd97-3cc6-4abb-9bb8-02965d5414c6</id>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(RanorexTargetsPath)" Condition="Exists('$(RanorexTargetsPath)')" />
+</Project>

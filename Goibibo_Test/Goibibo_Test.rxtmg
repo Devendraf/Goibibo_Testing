@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulegroupdoc
+rxversion="8.3">
+	<testsuiteentryhierarchy>
+		<flatlistofchildren>
+			<testmodule
+			id="151bb345-2ee2-4f6d-96e4-208d62348f75"
+			name="Sign_IN"
+			ref="3d3c07fc-93f6-49ce-aa8f-8a3d8842f484"
+			type="Recording">
+			</testmodule>
+			<modulegroups
+			id="8e3755c1-f7a2-49aa-8b8a-49b161742b8d"
+			name="Goibibo_Test">
+			</modulegroups>
+			<modulegroupdef
+			id="adcf1c9a-52a5-439f-856b-ad21cc2ca445"
+			name="ModuleGroup">
+			</modulegroupdef>
+			<modulegroupdef
+			id="de0d7f34-68c3-4264-b932-19ba31d6a9b5"
+			name="ModuleGroup1">
+			</modulegroupdef>
+			<testmodule
+			id="fbcc670b-dd93-4ade-b07b-f33551896a79"
+			name="Sign_IN"
+			ref="3d3c07fc-93f6-49ce-aa8f-8a3d8842f484"
+			type="Recording">
+			</testmodule>
+		</flatlistofchildren>
+		<childhierarchy>
+			<modulegroups
+			id="8e3755c1-f7a2-49aa-8b8a-49b161742b8d"
+			name="Goibibo_Test">
+				<modulegroupdef
+				id="adcf1c9a-52a5-439f-856b-ad21cc2ca445"
+				name="ModuleGroup">
+					<testmodule
+					id="fbcc670b-dd93-4ade-b07b-f33551896a79"
+					name="Sign_IN">
+					</testmodule>
+				</modulegroupdef>
+				<modulegroupdef
+				id="de0d7f34-68c3-4264-b932-19ba31d6a9b5"
+				name="ModuleGroup1">
+					<testmodule
+					id="151bb345-2ee2-4f6d-96e4-208d62348f75"
+					name="Sign_IN">
+					</testmodule>
+				</modulegroupdef>
+			</modulegroups>
+		</childhierarchy>
+	</testsuiteentryhierarchy>
+</modulegroupdoc>
